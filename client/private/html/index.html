@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>NodeJS Car</title>
+
+    <!-- Bootstrap -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="lib/jquery-ui/jquery-ui.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/jumbotron-narrow.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+</head>
+
+
+<body>
+<div class="container">
+    <div class="header clearfix">
+        <nav>
+            <ul class="nav nav-pills pull-right">
+                <li role="presentation" class="active"><a href="#">Home</a></li>
+                <!-- <li role="presentation"><a href="#">About</a></li>
+                <li role="presentation"><a href="#">Contact</a></li> -->
+            </ul>
+        </nav>
+        <h3 class="text-muted">NodeJS Car</h3>
+    </div>
+
+    <!-- Front -->
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <button type="button" class="btn btn-success btn-l car_control_btn" aria-label="Front" id="frontBtn" btnDirection="front">
+                    <a class="glyphicon glyphicon-arrow-up" href="#" role="button"></a>
+                    Front
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Left -->
+            <div class="col-md-4 col-md-offset-1">
+                <button type="button" class="btn btn-info btn-g car_control_btn" aria-label="Left" id="leftBtn" btnDirection="left">
+                    <a class="glyphicon glyphicon-arrow-left" href="#" role="button"></a>
+                    Left
+                </button>
+            </div>
+            <!-- Right -->
+            <div class="col-md-4 col-md-offset-2">
+                <button type="button" class="btn btn-info btn-g car_control_btn" aria-label="Right"  id="rightBtn" btnDirection="right">
+                    <a class="glyphicon glyphicon-arrow-right" href="#" role="button"></a>
+                    Right
+                </button>
+            </div>
+        </div>
+        <!-- Back -->
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <button type="button" class="btn btn-danger btn-l car_control_btn" aria-label="Backwards" id="backBtn" btnDirection="back">
+                    <a class="glyphicon glyphicon-arrow-down" href="#" role="button"></a>
+                    Back
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!--<footer class="footer">
+        <p>&copy; 2017 Innovative Apps, Inc.</p>
+    </footer>-->
+
+    <!-- ui-dialog -->
+    <div id="carConsole" title="Car Console">
+        <div id="carConsoleBody"></div>
+    </div>
+
+</div> <!-- /container -->
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="lib/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="js/app.js"></script>
+<script src="lib/jquery-ui/jquery-ui.min.js"></script>
+</body>
+
+</html>
