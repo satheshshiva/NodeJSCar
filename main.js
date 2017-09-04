@@ -7,6 +7,7 @@ var PRIVATE_DIR			= "client/private";
 var express = require('express');
 var app = express();
 var ws = require("nodejs-websocket");
+var wheelAdapter = require("./wheelAdapter.js");
 
 (function(){
     initRouting();
@@ -37,11 +38,11 @@ function startWebSocket(){
     var server = ws.createServer(function (conn) {
         console.log("New connection");
         conn.on("text", function (str) {
+            console.log("Received "+str);
             if(str === "hi"){
                 conn.sendText("Hi");
             }
-
-            console.log("Received "+str);
+            handleCarFunctions(str);
         });
         conn.on("close", function (code, reason) {
             console.log("Connection closed");
@@ -52,4 +53,20 @@ function startWebSocket(){
     }).listen(WEBSOCKET_PORT);
 
     console.log( 'WebSocket running on port:' + WEBSOCKET_PORT);
+}
+
+/**
+ * Check for car's commands
+ */
+
+function handleCarFunctions(str) {
+    if(str==="front"){
+        wheelAdapter.front();
+    }else if(str==="left"){
+
+    }else if(str==="right"){
+
+    }else if(str==="back"){
+        wheelAdapter.front();
+    }
 }
